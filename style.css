@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+:root{
+    --green: green;
+    --orange: orange;
+    --crimson: crimson;
+}
+* {
+    margin: 0;
+    padding: 0;
+    text-transform:capitalize;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html{
+    font-size: 100%;
+}
+body{
+    font-family: 'Nunito',sans-serif;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    margin: auto;
+}
+.dark-header{
+    background: #333;
+}
+header .navbar {
+    height: 5rem;
+    width: 100%;
+    background: var(--green);
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+header .navbar .logo h3 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2rem;
+    color: #fff;
+}
+
+header .navbar .items {
+    display: flex;
+    flex-wrap: wrap;
+}
+header .navbar .items a{
+    color: #fff;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    opacity: .6;
+    font-weight: 500;
+}
+header .navbar .items a:hover{
+    opacity: 1;
+}
+header .navbar .icons a {
+    color: #fff;
+    background: rgba(0,0,0,0.2);
+    padding: .8rem 1.2rem;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    position: relative;
+}
+header .navbar .icons a span{
+    font-size: .8rem;
+    color: #9e8383;
+    transform: rotate(130deg);
+    position: absolute;
+    bottom: .5rem;
+    right: .5rem;
+}
+header .navbar .icons .arr {
+    transform: rotate(-50deg);
+}
+.inner-body{
+    height: 100vh;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.inner-body .content{
+    max-width: 60%;
+}
+.inner-body .content h1{
+    font-size: 2.5rem;
+}
+.inner-body .content p {
+    font-size: 1.2rem;
+    opacity: .6;
+}
+.inner-body .content h1 span{
+    font-size: 3.5rem;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.inner-body .content .btn {
+    color: #fff;
+    padding: .5rem 1rem;
+    background: var(--green);
+    margin-top: 1rem;
+    outline: none;
+    border: none;
+
+}
+
+header .color-box {
+    position: fixed;
+    top: 5.5rem;
+    right: 1.5rem;
+    height: 6rem;
+    width: fit-content;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    padding: .5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    opacity: 0;
+}
+
+header .show-box {
+    opacity: 1 !important;
+} 
+
+header .color-box .btn-box button{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    margin: 0 .1rem;
+}
+header .color-box .btn-box .green{
+    background: var(--green);
+}
+header .color-box .btn-box .orange{
+    background: var(--orange);
+}
+header .color-box .btn-box .crimson{
+    background: var(--crimson);
+}
+header .color-box .btn-box .selected-color {
+    border: 1px solid #fff;
+    outline: 2px solid black;
+}
